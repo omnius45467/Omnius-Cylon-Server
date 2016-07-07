@@ -11,16 +11,24 @@
     "url": "git://github.com/spadin/simple-express-static-server.git"
   },
   "author": "Sandro Padin",
-  "contributors" : [ "Luca Capra" ],
+  "contributors": [
+    "Luca Capra"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/spadin/simple-express-static-server/issues"
   },
   "homepage": "https://github.com/spadin/simple-express-static-server",
   "dependencies": {
-    "express": "^4.1.2",
     "body-parser": "^1.1.2",
+    "cylon": "^1.2.0",
+    "cylon-api-http": "^0.4.1",
+    "cylon-firmata": "^0.23.0",
+    "cylon-gpio": "^0.27.0",
+    "cylon-i2c": "^0.24.0",
+    "cylon-skynet": "^0.14.0",
     "errorhandler": "^1.0.1",
+    "express": "^4.1.2",
     "method-override": "^1.0.0"
   },
   "bin": {
