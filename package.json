@@ -1,24 +1,18 @@
 {
-  "name": "simple-express-static-server",
+  "name": "cylon-server",
   "version": "0.0.1",
-  "description": "A very simple static file server.",
+  "description": "cylon server.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/spadin/simple-express-static-server.git"
+    "url": "git://github.com/sammyboy45467/cylon-server"
   },
-  "author": "Sandro Padin",
-  "contributors": [
-    "Luca Capra"
-  ],
+  "author": "Jeremy Robles",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/spadin/simple-express-static-server/issues"
-  },
-  "homepage": "https://github.com/spadin/simple-express-static-server",
+  "homepage": "https://github.com/sammyboy45467/cylon-server",
   "dependencies": {
     "body-parser": "^1.1.2",
     "cylon": "^1.2.0",
