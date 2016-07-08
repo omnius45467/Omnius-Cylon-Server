@@ -15,6 +15,7 @@
   "homepage": "https://github.com/sammyboy45467/cylon-server",
   "dependencies": {
     "body-parser": "^1.1.2",
+    "curlrequest": "^0.5.7",
     "cylon": "^1.2.0",
     "cylon-api-http": "^0.4.1",
     "cylon-firmata": "^0.23.0",
