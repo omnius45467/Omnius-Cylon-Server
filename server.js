@@ -25,7 +25,7 @@ Cylon.api({
 var test = Cylon.robot({
     name: 'omnius',
     connections: {
-        arduino: {adaptor: 'firmata', port: '/dev/cu.usbmodem34'}
+        arduino: {adaptor: 'firmata', port: '/dev/cu.usbmodem39'}
     },
     // devices: {
     //     motor1PWR: {driver: 'direct-pin', pin: 7},
