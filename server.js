@@ -25,7 +25,7 @@ Cylon.api({
 var test = Cylon.robot({
     name: 'omnius',
     connections: {
-        arduino: {adaptor: 'firmata', port: '/dev/cu.usbmodem39'}
+        arduino: {adaptor: 'firmata', port: '/dev/cu.usbmodem1421'}
     },
     // devices: {
     //     motor1PWR: {driver: 'direct-pin', pin: 7},
@@ -50,10 +50,10 @@ var test = Cylon.robot({
         test.connections.arduino.pinMode(5, 'OUTPUT');
         test.connections.arduino.pinMode(4, 'OUTPUT');
         after((1).seconds(), function() {
-            test.connections.arduino.digitalWrite(7, 1);
-            test.connections.arduino.digitalWrite(6, 0);
-            test.connections.arduino.digitalWrite(5, 0);
-            test.connections.arduino.digitalWrite(4, 1);
+            test.connections.arduino.digitalWrite(7, 0);
+            test.connections.arduino.digitalWrite(6, 1);
+            test.connections.arduino.digitalWrite(5, 1);
+            test.connections.arduino.digitalWrite(4, 0);
         });
         after((2).seconds(), function() {
             test.connections.arduino.digitalWrite(7, 0);
@@ -69,10 +69,10 @@ var test = Cylon.robot({
         test.connections.arduino.pinMode(5, 'OUTPUT');
         test.connections.arduino.pinMode(4, 'OUTPUT');
         after((1).seconds(), function() {
-            test.connections.arduino.digitalWrite(7, 0);
-            test.connections.arduino.digitalWrite(6, 1);
-            test.connections.arduino.digitalWrite(5, 1);
-            test.connections.arduino.digitalWrite(4, 0);
+            test.connections.arduino.digitalWrite(7, 1);
+            test.connections.arduino.digitalWrite(6, 0);
+            test.connections.arduino.digitalWrite(5, 0);
+            test.connections.arduino.digitalWrite(4, 1);
         });
         after((2).seconds(), function() {
             test.connections.arduino.digitalWrite(7, 0);
