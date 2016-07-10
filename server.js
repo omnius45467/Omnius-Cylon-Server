@@ -104,9 +104,9 @@ var test = Cylon.robot({
         after((1).seconds(), function() {
             test.connections.arduino.digitalWrite(3, 255);
             test.connections.arduino.digitalWrite(5, 255);
-            test.connections.arduino.digitalWrite(6, 1);
+            test.connections.arduino.digitalWrite(6, 255);
             test.connections.arduino.digitalWrite(9, 0);
-            test.connections.arduino.digitalWrite(10, 1);
+            test.connections.arduino.digitalWrite(10, 255);
             test.connections.arduino.digitalWrite(11, 0);
         });
         after((2).seconds(), function() {
@@ -130,9 +130,9 @@ var test = Cylon.robot({
             test.connections.arduino.digitalWrite(3, 255);
             test.connections.arduino.digitalWrite(5, 255);
             test.connections.arduino.digitalWrite(6, 0);
-            test.connections.arduino.digitalWrite(9, 1);
+            test.connections.arduino.digitalWrite(9, 255);
             test.connections.arduino.digitalWrite(10, 0);
-            test.connections.arduino.digitalWrite(11, 1);
+            test.connections.arduino.digitalWrite(11, 255);
         });
         after((2).seconds(), function() {
             test.connections.arduino.digitalWrite(3, 0);
@@ -159,19 +159,25 @@ app.get("/api/robots/omnius/commands/forward", function (req, res) {
 app.get("/api/robots/omnius/commands/backward", function (req, res) {
     res.sendStatus(200);
     curl.request('http://localhost:4040/api/robots/omnius/commands/backward', function(err) {
-
+        if(err){
+            console.log(err);
+        }
     });
 });
 app.get("/api/robots/omnius/commands/left", function (req, res) {
     res.sendStatus(200);
     curl.request('http://localhost:4040/api/robots/omnius/commands/left', function(err) {
-
+        if(err){
+            console.log(err);
+        }
     });
 });
 app.get("/api/robots/omnius/commands/right", function (req, res) {
     res.sendStatus(200);
     curl.request('http://localhost:4040/api/robots/omnius/commands/right', function(err) {
-
+        if(err){
+            console.log(err);
+        }
     });
 });
 
