@@ -45,78 +45,102 @@ var test = Cylon.robot({
         };
     },
     Forward: function(){
-        test.connections.arduino.pinMode(7, 'OUTPUT');
-        test.connections.arduino.pinMode(6, 'OUTPUT');
+        test.connections.arduino.pinMode(3, 'OUTPUT');
         test.connections.arduino.pinMode(5, 'OUTPUT');
-        test.connections.arduino.pinMode(4, 'OUTPUT');
+        test.connections.arduino.pinMode(6, 'OUTPUT');
+        test.connections.arduino.pinMode(9, 'OUTPUT');
+        test.connections.arduino.pinMode(10, 'OUTPUT');
+        test.connections.arduino.pinMode(11, 'OUTPUT');
         after((1).seconds(), function() {
-            test.connections.arduino.digitalWrite(7, 0);
-            test.connections.arduino.digitalWrite(6, 1);
-            test.connections.arduino.digitalWrite(5, 1);
-            test.connections.arduino.digitalWrite(4, 0);
+            test.connections.arduino.digitalWrite(3, 255);
+            test.connections.arduino.digitalWrite(5, 255);
+            test.connections.arduino.digitalWrite(6, 0);
+            test.connections.arduino.digitalWrite(9, 255);
+            test.connections.arduino.digitalWrite(10, 255);
+            test.connections.arduino.digitalWrite(11, 0);
         });
         after((2).seconds(), function() {
-            test.connections.arduino.digitalWrite(7, 0);
-            test.connections.arduino.digitalWrite(6, 0);
+            test.connections.arduino.digitalWrite(3, 0);
             test.connections.arduino.digitalWrite(5, 0);
-            test.connections.arduino.digitalWrite(4, 0);
+            test.connections.arduino.digitalWrite(6, 0);
+            test.connections.arduino.digitalWrite(9, 0);
+            test.connections.arduino.digitalWrite(10, 0);
+            test.connections.arduino.digitalWrite(11, 0);
         });
         console.log('forward');
     },
     Backward: function(){
-        test.connections.arduino.pinMode(7, 'OUTPUT');
-        test.connections.arduino.pinMode(6, 'OUTPUT');
+        test.connections.arduino.pinMode(3, 'OUTPUT');
         test.connections.arduino.pinMode(5, 'OUTPUT');
-        test.connections.arduino.pinMode(4, 'OUTPUT');
+        test.connections.arduino.pinMode(6, 'OUTPUT');
+        test.connections.arduino.pinMode(9, 'OUTPUT');
+        test.connections.arduino.pinMode(10, 'OUTPUT');
+        test.connections.arduino.pinMode(11, 'OUTPUT');
         after((1).seconds(), function() {
-            test.connections.arduino.digitalWrite(7, 1);
-            test.connections.arduino.digitalWrite(6, 0);
-            test.connections.arduino.digitalWrite(5, 0);
-            test.connections.arduino.digitalWrite(4, 1);
+            test.connections.arduino.digitalWrite(3, 255);
+            test.connections.arduino.digitalWrite(5, 255);
+            test.connections.arduino.digitalWrite(6, 255);
+            test.connections.arduino.digitalWrite(9, 0);
+            test.connections.arduino.digitalWrite(10, 0);
+            test.connections.arduino.digitalWrite(11, 255);
         });
         after((2).seconds(), function() {
-            test.connections.arduino.digitalWrite(7, 0);
+            test.connections.arduino.digitalWrite(3, 255);
+            test.connections.arduino.digitalWrite(5, 255);
             test.connections.arduino.digitalWrite(6, 0);
-            test.connections.arduino.digitalWrite(5, 0);
-            test.connections.arduino.digitalWrite(4, 0);
+            test.connections.arduino.digitalWrite(9, 0);
+            test.connections.arduino.digitalWrite(10, 0);
+            test.connections.arduino.digitalWrite(11, 0);
         });
         console.log('backward');
     },
     Left: function(){
-        test.connections.arduino.pinMode(7, 'OUTPUT');
-        test.connections.arduino.pinMode(6, 'OUTPUT');
+        test.connections.arduino.pinMode(3, 'OUTPUT');
         test.connections.arduino.pinMode(5, 'OUTPUT');
-        test.connections.arduino.pinMode(4, 'OUTPUT');
+        test.connections.arduino.pinMode(6, 'OUTPUT');
+        test.connections.arduino.pinMode(9, 'OUTPUT');
+        test.connections.arduino.pinMode(10, 'OUTPUT');
+        test.connections.arduino.pinMode(11, 'OUTPUT');
         after((1).seconds(), function() {
-            test.connections.arduino.digitalWrite(7, 1);
-            test.connections.arduino.digitalWrite(6, 0);
-            test.connections.arduino.digitalWrite(5, 1);
-            test.connections.arduino.digitalWrite(4, 0);
+            test.connections.arduino.digitalWrite(3, 255);
+            test.connections.arduino.digitalWrite(5, 255);
+            test.connections.arduino.digitalWrite(6, 1);
+            test.connections.arduino.digitalWrite(9, 0);
+            test.connections.arduino.digitalWrite(10, 1);
+            test.connections.arduino.digitalWrite(11, 0);
         });
         after((2).seconds(), function() {
-            test.connections.arduino.digitalWrite(7, 0);
-            test.connections.arduino.digitalWrite(6, 0);
+            test.connections.arduino.digitalWrite(3, 0);
             test.connections.arduino.digitalWrite(5, 0);
-            test.connections.arduino.digitalWrite(4, 0);
+            test.connections.arduino.digitalWrite(6, 0);
+            test.connections.arduino.digitalWrite(9, 0);
+            test.connections.arduino.digitalWrite(10, 0);
+            test.connections.arduino.digitalWrite(11, 0);
         });
         console.log('left');
     },
     Right: function(){
-        test.connections.arduino.pinMode(7, 'OUTPUT');
-        test.connections.arduino.pinMode(6, 'OUTPUT');
+        test.connections.arduino.pinMode(3, 'OUTPUT');
         test.connections.arduino.pinMode(5, 'OUTPUT');
-        test.connections.arduino.pinMode(4, 'OUTPUT');
+        test.connections.arduino.pinMode(6, 'OUTPUT');
+        test.connections.arduino.pinMode(9, 'OUTPUT');
+        test.connections.arduino.pinMode(10, 'OUTPUT');
+        test.connections.arduino.pinMode(11, 'OUTPUT');
         after((1).seconds(), function() {
-            test.connections.arduino.digitalWrite(7, 0);
-            test.connections.arduino.digitalWrite(6, 1);
-            test.connections.arduino.digitalWrite(5, 0);
-            test.connections.arduino.digitalWrite(4, 1);
+            test.connections.arduino.digitalWrite(3, 255);
+            test.connections.arduino.digitalWrite(5, 255);
+            test.connections.arduino.digitalWrite(6, 0);
+            test.connections.arduino.digitalWrite(9, 1);
+            test.connections.arduino.digitalWrite(10, 0);
+            test.connections.arduino.digitalWrite(11, 1);
         });
         after((2).seconds(), function() {
-            test.connections.arduino.digitalWrite(7, 0);
-            test.connections.arduino.digitalWrite(6, 0);
+            test.connections.arduino.digitalWrite(3, 0);
             test.connections.arduino.digitalWrite(5, 0);
-            test.connections.arduino.digitalWrite(4, 0);
+            test.connections.arduino.digitalWrite(6, 0);
+            test.connections.arduino.digitalWrite(9, 0);
+            test.connections.arduino.digitalWrite(10, 0);
+            test.connections.arduino.digitalWrite(11, 0);
         });
         console.log('right');
     }
@@ -127,7 +151,9 @@ test.start();
 app.get("/api/robots/omnius/commands/forward", function (req, res) {
     res.sendStatus(200);
     curl.request('http://localhost:4040/api/robots/omnius/commands/forward', function(err) {
-
+        if(err){
+            console.log(err);
+        }
     });
 });
 app.get("/api/robots/omnius/commands/backward", function (req, res) {
