@@ -1,18 +1,18 @@
 # Cylon Server
 
-## The 
+## The goal of this api is to create a way for a user to control a droid through https connections with nodejs
 
 Install Deps
 ```
     npm i
 ```
 
-run server
+Run server
 ```
     node server
 ```
 
-run ngrok
+Run ngrok
 ```
     ngrok http 8080
 ```
